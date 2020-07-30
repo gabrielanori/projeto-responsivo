@@ -1,0 +1,108 @@
+body{
+    font: normal normal 1em/1.5 arial, verdana, tahoma; /*100%=1em no lugar de normal posso colocar bold e italico*/
+}
+.site-container{
+
+    width: 100%;
+    max-width: 1200px; /*eu uso isso para que fixe a tela em 1200 ele nao fiminui as letras qdo dim a tela, fixa*/
+    margin: auto;
+}
+header, footer {
+    /*min-height: 150px;*/
+    background-color: darkkhaki;
+}
+
+main{
+    min-height: 800px;
+    background-color: cornflowerblue;
+}
+
+/*DESKTOP FIRST
+header h1 {
+    font-size: 2.5em;
+    text-align: center;
+    line-height: 2.5;
+}
+header li{
+    border: 1px solid;
+    float: left;
+    width: 200px;
+    text-align: center;
+    line-height: 2;
+    background-color: darkslateblue;
+
+}
+
+header li a {
+    color: aquamarine;
+    text-decoration: none;
+    display: block;
+} */
+
+/*MOBILE FIRST*/
+header h1 {
+    font-size: 1.5em;
+    text-align: center;
+    line-height: 2;
+    color:brown;
+    text-decoration: none;
+}
+header li{
+    border-bottom: 2px solid;
+    
+    text-align: center;
+    line-height: 2;
+    background-color: yellowgreen;
+    color: darkslategray;
+    text-decoration: none;
+    display: block;
+
+}
+
+header li:first-child{
+
+    border-top: 2px solid;
+}
+header a {
+    color: inherit;
+    text-decoration: inherit;
+    display: inherit;
+}
+
+main p {
+
+    padding: 0.5em 0.5em 0; /*descola o paragrafo da borda*/
+}
+
+main img {
+    width: 100%;
+}
+
+/*CSS media types baseado no tipo de dispositivo- handheld, print impressora, screen*/
+
+@media print {
+    header nav {
+/*visibility hidden*/
+        display:none;
+    }
+}
+
+/*CSS media queries dependendo do tamanho do dispositivo entrega umma tela*/
+
+@media screen and (min-width: 768px) {
+    header li {
+        float: left;
+        border-top: 2px solid;
+        width: 16.66%;/*peguei meu viewport  768/6=128px //  128px/768=0.16666 *100=16.66*/
+
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    header li {
+        text-align: left;
+        padding-left: 0.5em;
+        font-size: 2em;
+
+    }
+}
